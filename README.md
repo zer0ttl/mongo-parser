@@ -1,5 +1,9 @@
 # Python MongoDB Parser using pymongo and masscan
 
+Read more about how I wrote this script at my blog below :
+
+https://zerottl.com/posts/pwning-open-mongodb-servers-using-python/
+
 ### Requirements
 
 * Python 3.7+
