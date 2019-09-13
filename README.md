@@ -3,9 +3,18 @@
 ### Requirements
 
 * Python 3.7+
+* pipenv
 * pymongo
 * masscan
 
+### Installation
+
+```bash
+git clone https://github.com/zer0ttl/mongo-parser.git
+cd mongo-parser/
+pipenv shell
+pipenv install pymongo
+```
 ### Usage
 
 ```bash
@@ -18,15 +27,21 @@ optional arguments:
                         Masscan output file in XML format
 ```
 
-1. Use `masscan` to search an IP range for MongoDB servers.
+* Use `masscan` to search an IP range for MongoDB servers.
 
 ```bash
 masscan 10.0.0.0/0 -p 27017 --rate 10000 -oX mongodb_servers.xml
 ```
 
-2. Use the XML output from masscan for `mongo_parser.py`
+* Use the XML output from masscan for `mongo_parser.py`
 
 ```bash
 python mongo_parser.py -x mongodb_servers.xml
 ```
 ### Output
+
+Output will be saved to `mongodb_servers.csv` file.
+
+### Future enhancements
+
+- [ ] Make this script async
